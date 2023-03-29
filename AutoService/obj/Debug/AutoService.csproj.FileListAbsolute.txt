@@ -1,0 +1,12 @@
+C:\Users\danil\OneDrive\Документы\AutoServiceProject\AutoService\AutoService\bin\Debug\AutoService.exe.config
+C:\Users\danil\OneDrive\Документы\AutoServiceProject\AutoService\AutoService\bin\Debug\AutoService.exe
+C:\Users\danil\OneDrive\Документы\AutoServiceProject\AutoService\AutoService\bin\Debug\AutoService.pdb
+C:\Users\danil\OneDrive\Документы\AutoServiceProject\AutoService\AutoService\obj\Debug\AutoService.csproj.AssemblyReference.cache
+C:\Users\danil\OneDrive\Документы\AutoServiceProject\AutoService\AutoService\obj\Debug\AutoService.csproj.SuggestedBindingRedirects.cache
+C:\Users\danil\OneDrive\Документы\AutoServiceProject\AutoService\AutoService\obj\Debug\AutoService.Properties.Resources.resources
+C:\Users\danil\OneDrive\Документы\AutoServiceProject\AutoService\AutoService\obj\Debug\AutoService.csproj.GenerateResource.cache
+C:\Users\danil\OneDrive\Документы\AutoServiceProject\AutoService\AutoService\obj\Debug\AutoService.csproj.CoreCompileInputs.cache
+C:\Users\danil\OneDrive\Документы\AutoServiceProject\AutoService\AutoService\obj\Debug\AutoService.exe
+C:\Users\danil\OneDrive\Документы\AutoServiceProject\AutoService\AutoService\obj\Debug\AutoService.pdb
+C:\Users\danil\OneDrive\Документы\AutoServiceProject\AutoService\AutoService\obj\Debug\AutoService.MainForm.resources
+C:\Users\danil\OneDrive\Документы\AutoServiceProject\AutoService\AutoService\obj\Debug\AutoService.ServiceForm.resources
