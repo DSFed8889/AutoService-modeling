@@ -1,16 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<xs:schema id="Requests" 
-                  targetNamespace="http://tempuri.org/Requests.xsd"
-                  elementFormDefault="qualified"
-                  attributeFormDefault="qualified"
-                  xmlns="http://tempuri.org/Requests.xsd"
-                  xmlns:mstns="http://tempuri.org/Requests.xsd"
-                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
-                  xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
-    <xs:element name="Requests" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true">
-        <xs:complexType>
-            <xs:choice minOccurs="0" maxOccurs="unbounded"></xs:choice>
-        </xs:complexType>
-    </xs:element>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Requests" targetNamespace="http://tempuri.org/Requests.xsd" xmlns:mstns="http://tempuri.org/Requests.xsd" xmlns="http://tempuri.org/Requests.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Requests" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Requests" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Requests">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTRequest" msprop:Generator_RowClassName="DTRequestRow" msprop:Generator_RowEvHandlerName="DTRequestRowChangeEventHandler" msprop:Generator_RowDeletedName="DTRequestRowDeleted" msprop:Generator_RowDeletingName="DTRequestRowDeleting" msprop:Generator_RowEvArgName="DTRequestRowChangeEvent" msprop:Generator_TablePropName="DTRequest" msprop:Generator_RowChangedName="DTRequestRowChanged" msprop:Generator_UserTableName="DTRequest" msprop:Generator_RowChangingName="DTRequestRowChanging" msprop:Generator_TableClassName="DTRequestDataTable" msprop:Generator_TableVarName="tableDTRequest">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Невып._x0020_услуги" msprop:Generator_UserColumnName="Невып. услуги" msprop:Generator_ColumnPropNameInTable="_Невып__услугиColumn" msprop:Generator_ColumnPropNameInRow="_Невып__услуги" msprop:Generator_ColumnVarNameInTable="_columnНевып__услуги" type="xs:string" minOccurs="0" />
+              <xs:element name="Вып._x0020_услуги" msprop:Generator_UserColumnName="Вып. услуги" msprop:Generator_ColumnPropNameInTable="_Вып__услугиColumn" msprop:Generator_ColumnPropNameInRow="_Вып__услуги" msprop:Generator_ColumnVarNameInTable="_columnВып__услуги" type="xs:string" minOccurs="0" />
+              <xs:element name="Состояние" msprop:Generator_UserColumnName="Состояние" msprop:Generator_ColumnPropNameInTable="СостояниеColumn" msprop:Generator_ColumnPropNameInRow="Состояние" msprop:Generator_ColumnVarNameInTable="columnСостояние" type="xs:string" minOccurs="0" />
+              <xs:element name="Время_x0020_обслуживания" msprop:Generator_ColumnPropNameInRow="Время_обслуживания" msprop:Generator_ColumnPropNameInTable="Время_обслуживанияColumn" msprop:Generator_ColumnVarNameInTable="columnВремя_обслуживания" msprop:Generator_UserColumnName="Время обслуживания" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

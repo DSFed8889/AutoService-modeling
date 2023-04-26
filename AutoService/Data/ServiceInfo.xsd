@@ -1,16 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<xs:schema id="ServiceInfo" 
-                  targetNamespace="http://tempuri.org/ServiceInfo.xsd"
-                  elementFormDefault="qualified"
-                  attributeFormDefault="qualified"
-                  xmlns="http://tempuri.org/ServiceInfo.xsd"
-                  xmlns:mstns="http://tempuri.org/ServiceInfo.xsd"
-                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
-                  xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
-    <xs:element name="ServiceInfo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true">
-        <xs:complexType>
-            <xs:choice minOccurs="0" maxOccurs="unbounded"></xs:choice>
-        </xs:complexType>
-    </xs:element>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ServiceInfo" targetNamespace="http://tempuri.org/ServiceInfo.xsd" xmlns:mstns="http://tempuri.org/ServiceInfo.xsd" xmlns="http://tempuri.org/ServiceInfo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ServiceInfo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ServiceInfo" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ServiceInfo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTServiceInfo" msprop:Generator_RowClassName="DTServiceInfoRow" msprop:Generator_RowEvHandlerName="DTServiceInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="DTServiceInfoRowDeleted" msprop:Generator_RowDeletingName="DTServiceInfoRowDeleting" msprop:Generator_RowEvArgName="DTServiceInfoRowChangeEvent" msprop:Generator_TablePropName="DTServiceInfo" msprop:Generator_RowChangedName="DTServiceInfoRowChanged" msprop:Generator_UserTableName="DTServiceInfo" msprop:Generator_RowChangingName="DTServiceInfoRowChanging" msprop:Generator_TableClassName="DTServiceInfoDataTable" msprop:Generator_TableVarName="tableDTServiceInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Имя" msprop:Generator_UserColumnName="Имя" msprop:Generator_ColumnPropNameInTable="ИмяColumn" msprop:Generator_ColumnPropNameInRow="Имя" msprop:Generator_ColumnVarNameInTable="columnИмя" type="xs:string" minOccurs="0" />
+              <xs:element name="Количество_x0020_выполненных_x0020_услуг" msprop:Generator_UserColumnName="Количество выполненных услуг" msprop:Generator_ColumnPropNameInTable="Количество_выполненных_услугColumn" msprop:Generator_ColumnPropNameInRow="Количество_выполненных_услуг" msprop:Generator_ColumnVarNameInTable="columnКоличество_выполненных_услуг" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

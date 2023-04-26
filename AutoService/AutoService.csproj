@@ -51,7 +51,11 @@
     <Compile Include="Classes\Manufactury.cs" />
     <Compile Include="Classes\Model.cs" />
     <Compile Include="Classes\Request.cs" />
+    <Compile Include="Classes\Service.cs" />
     <Compile Include="Classes\Worker.cs" />
+    <Compile Include="Data\Requests.cs">
+      <DependentUpon>Requests.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Data\Requests.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -61,6 +65,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ServiceInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Services.cs">
+      <DependentUpon>Services.xsd</DependentUpon>
     </Compile>
     <Compile Include="Data\Services.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -98,6 +105,8 @@
     </Compile>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="ClassDiagram4.cd" />
     <None Include="Data\Requests.xsc">
       <DependentUpon>Requests.xsd</DependentUpon>
     </None>

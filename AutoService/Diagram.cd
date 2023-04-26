@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AutoService.Classes.AutoService">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAEBEAAQAA=</HashCode>
+      <FileName>Classes\AutoService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="manufacturies" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AutoService.Classes.Manufactury">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACgAAAAAAAAAAAAAAgAAAAAAAACAAEAAEAMAAQAA=</HashCode>
+      <FileName>Classes\Manufactury.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="workers" />
+      <Field Name="requests" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AutoService.Classes.Model">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUwFAEAEAAACQAAAAASAECIAQQAAAAgAAAGEAIAEyEA=</HashCode>
+      <FileName>Classes\Model.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="autoService" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="requestList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AutoService.Classes.Request">
+    <Position X="8.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAAAAAAAAAAAAgACAAAAAAAAAAAAAACIAIAAA=</HashCode>
+      <FileName>Classes\Request.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="status" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="services" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AutoService.Classes.Service">
+    <Position X="11.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAgQAAAAAAAAAAAAAABAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Service.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoService.Classes.Worker">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQECAAAAAAgAAAAAUAAABCACAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Classes\Worker.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="request" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="AutoService.Classes.RequestStatus">
+    <Position X="9" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Request.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
