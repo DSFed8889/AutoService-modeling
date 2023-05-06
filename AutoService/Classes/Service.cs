@@ -15,6 +15,8 @@ namespace AutoService.Classes
         public int servTime;
         public int servTimeDiv;
         public int price;
+
+        //конструктор
         public Service(string servName, int manufactureID, int servTime, int servTimeDiv, int price)
         {
             this.servName = servName;

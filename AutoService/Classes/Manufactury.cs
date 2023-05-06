@@ -12,6 +12,8 @@ namespace AutoService.Classes
         int manufactureID;
         Worker[] workers;
         List<Request> requests = new List<Request>();
+
+        //конструктор
         public Manufactury (int manufactureID, Random rnd, int workersCount) {
             this.manufactureID = manufactureID;
             workers = new Worker[workersCount];
@@ -21,12 +23,14 @@ namespace AutoService.Classes
             }
         }
 
+        //установка заявки в очередь
         public void SetRequest (Request request)
         {
             request.status = RequestStatus.onQueue;
             requests.Add(request);
         }
 
+        //минута работы цеха
         public void Tick()
         {
             if (requests.Count > 0)
@@ -54,6 +58,7 @@ namespace AutoService.Classes
             }
         }
 
+        //выдача зарплаты рабочим
         public void PaySalary()
         {
             foreach(Worker worker in workers)
@@ -66,6 +71,7 @@ namespace AutoService.Classes
             }
         }
 
+        //получение общей суммы выплат рабочим цеха
         public int GetSumSalary()
         {
             int sum = 0;
@@ -74,11 +80,13 @@ namespace AutoService.Classes
             return sum;
         }
 
+        //получение длины очереди в цеху
         public int GetQueueLen()
         {
             return requests.Count;
         }
 
+        //получение занятости рабочих в цеху
         public int GetBusyness()
         {
             int n = 0;

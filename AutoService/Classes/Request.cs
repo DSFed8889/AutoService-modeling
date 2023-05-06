@@ -22,6 +22,8 @@ namespace AutoService.Classes
         public RequestStatus status;
         public int startTime;
         public int endTime = 0;
+
+        //конструктор
         public Request(List<Service> services, Random rnd, int maxServListLen, int startTime)
         {
             this.services = new List<Service>(services);
@@ -37,22 +39,13 @@ namespace AutoService.Classes
             }
         }
 
+        //перестановка услуги в список выполненных
         public void makeServiceDone(string servName)
         {
-            //List<int> servIDList = new List<int>();
-            //foreach(var serv in servList)
-            //{
-            //    servIDList.Add(serv.servID);
-            //}
-            //int servInd = servIDList.FindIndex(x => x.Equals(servID));
             int servInd = servList.FindIndex(x => x.servName.Equals(servName));
 
             doneServList.Add(servList[servInd]);
             servList.RemoveAt(servInd);
-        }
-        public int GetDoneServiceCount()
-        {
-            return doneServList.Count;
         }
     }
 }

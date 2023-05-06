@@ -20,10 +20,12 @@ namespace AutoService.Classes
 
         int timer = 0;
 
+        //конструктор
         public Worker(Random rnd) {
             this.rnd = rnd;
         }
 
+        //установка заявки на выполнение рабочему
         public void SetRequest(Request request, List<string> servNames)
         {
             this.request = request;
@@ -40,6 +42,7 @@ namespace AutoService.Classes
             isBusy = true;
         }
 
+        //минута работы рабочего
         public void Tick()
         {
             if (timer > 0 && isBusy)

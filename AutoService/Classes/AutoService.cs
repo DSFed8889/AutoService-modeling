@@ -10,6 +10,7 @@ namespace AutoService.Classes
     {
         Manufactury[] manufacturies;
 
+        //конструктор
         public AutoService(Random rnd, int workersCount) {
             manufacturies = new Manufactury[4];
             for (int i = 0; i < 4; i++)
@@ -18,6 +19,7 @@ namespace AutoService.Classes
             }
         }
 
+        //отправка заявки в цеха
         public void SetRequest(Request request)
         {
             for (int i = 0; i < 4; i++)
@@ -25,18 +27,21 @@ namespace AutoService.Classes
                     manufacturies[i].SetRequest(request);
         }
 
+        //минута работы автосервиса
         public void Tick()
         {
             foreach (Manufactury man in manufacturies)
                 man.Tick();
         }
 
+        //команда всем цехам выдать зарплату рабочим
         public void PaySalary()
         {
             foreach (Manufactury man in manufacturies)
                 man.PaySalary();
         }
 
+        //получение полной суммы выплат рабочим
         public int GetSumSalary()
         {
             int sum = 0;
@@ -45,6 +50,7 @@ namespace AutoService.Classes
             return sum;
         }
 
+        //получение длин очередей в цехах
         public int[] GetQueuesLen()
         {
             int[] queues = new int[4];
@@ -55,6 +61,7 @@ namespace AutoService.Classes
             return queues;
         }
 
+        //получение занятости в цехах
         public int[] GetBusyness()
         {
             int[] busyness = new int[4];

@@ -100,7 +100,7 @@ namespace AutoService
         {
             model = new Model(services, (int)workersCountNUD.Value, (int)maxServListLenNUD.Value, new int[2] { (int)requestTimeMinNUD.Value, (int)requestTimeMaxNUD.Value });
             ShowStats();
-            model.SetMoneyChart(moneyChart);
+            moneyChart.Series[0].Points.AddXY(model.GetTime(), model.GetMoney());
 
             stepBtn.Text = "Сделать шаг";
 
@@ -123,7 +123,7 @@ namespace AutoService
             {
                 model.Tick();
                 if (i % 60 == 0)
-                    model.SetMoneyChart(moneyChart);
+                    moneyChart.Series[0].Points.AddXY(model.GetTime(), model.GetMoney());
 
                 if (model.IsEnd())
                 {
@@ -138,7 +138,7 @@ namespace AutoService
                     break;
                 }
             }
-            model.SetMoneyChart(moneyChart);
+            moneyChart.Series[0].Points.AddXY(model.GetTime(), model.GetMoney());
         }
 
         private void stepBtn_Click(object sender, EventArgs e)

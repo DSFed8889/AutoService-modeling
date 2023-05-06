@@ -32,6 +32,7 @@ namespace AutoService.Classes
 
         const int endTime = 9660;
 
+        //конструктор
         public Model(List<Service> services, int workersCount, int maxServListLen, int[] requestTime) {
             this.services = services;
             this.maxServListLen = maxServListLen;
@@ -49,15 +50,13 @@ namespace AutoService.Classes
             return time >= endTime;
         }
 
+        //получение текущего времени
         public string GetTime()
         {
             return (time / 1440 + 1).ToString() + "-й день " + (time % 1440 / 60).ToString() + "-й час";
         }
 
-        private void nextTime()
-        {
-        }
-
+        //проверка: рабочее ли время
         private bool isNotWorkTime()
         {
             int day = (time / 1440) % 7;
@@ -68,6 +67,7 @@ namespace AutoService.Classes
                 return isMorning || time % 1440 > 1260;
         }
 
+        //минута моделирования
         public void Tick()
         {
 
@@ -76,7 +76,6 @@ namespace AutoService.Classes
             if (time % 10080 == 9660)
                 autoService.PaySalary();
 
-            nextTime();
             if (isNotWorkTime())
                 return;
 
@@ -105,6 +104,7 @@ namespace AutoService.Classes
                     request.endTime = time;
         }
 
+        //загрузка списка заявок
         public void SetRequestsDT(Requests requests)
         {
             requests.DTRequest.Clear();
@@ -142,6 +142,7 @@ namespace AutoService.Classes
             }
         }
 
+        //загрузка списка данных по услугам
         public void SetServiceInfoDT(ServiceInfo serviceInfo)
         {
             serviceInfo.DTServiceInfo.Clear();
@@ -161,11 +162,7 @@ namespace AutoService.Classes
             }
         }
 
-        public void SetMoneyChart(Chart moneyChart)
-        {
-            moneyChart.Series[0].Points.AddXY(GetTime(), GetMoney());
-        }
-
+        //получение текущего бюджета
         public int GetMoney()
         {
             int money = 0;
@@ -176,6 +173,7 @@ namespace AutoService.Classes
             return money;
         }
 
+        //получение средней длины очереди в каждом цеху
         public float[] GetAvgQueueLen()
         {
             float[] avgQueues = new float[4];
@@ -184,6 +182,7 @@ namespace AutoService.Classes
             return avgQueues;
         }
 
+        //получение среднего времени обработки
         public string GetAvgServeTime()
         {
             float avgServeTime = 0;
@@ -197,6 +196,7 @@ namespace AutoService.Classes
             return servTime / 60 + " ч. " + servTime % 60 + " мин.";
         }
 
+        //получение средней занятости в каждом цеху
         public float[] GetAvgBusyness()
         {
             float[] avgBusinesses = new float[4];
@@ -205,26 +205,31 @@ namespace AutoService.Classes
             return avgBusinesses;
         }
 
+        //получение средней зарплаты
         public float GetAvgSalary()
         {
             return autoService.GetSumSalary() / (4 * workersCount);
         }
 
+        //получение текущих длин очередей в каждом цеху
         public int[] GetQueuesLen()
         {
             return autoService.GetQueuesLen();
         }
 
+        //получение занятости в каждом цеху
         public int[] GetBusyness()
         {
             return autoService.GetBusyness();
         }
 
+        //получение количества заявок
         public int GetRequestNum()
         {
             return requestList.Count;
         }
 
+        //получение количества выполненных заявок
         public int GetDoneRequestNum()
         {
             int n = 0;
